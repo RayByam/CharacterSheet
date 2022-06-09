@@ -1,4 +1,4 @@
-<div *ngFor ="let character of characterService.characters[userService.current_user]">
+<div *ngFor ="let character of characterService.character_list[userService.current_user]">
     <label>Name: {{character["name"]}}</label><br>
     <label>Class: {{character["class"]}}</label><br>
     <label>Level: {{character["level"]}}</label><br>

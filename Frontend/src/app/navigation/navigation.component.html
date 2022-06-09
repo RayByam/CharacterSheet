@@ -1,5 +1,6 @@
 <label for="user">Choose a user:</label>
 
-<select name="user" id="user" [(ngModel)]="userService.current_user">
-    <option *ngFor="let user of userService.user_data" [value]="user.name">{{user.name | titlecase}}</option>
+{{userService.users | json }} 
+<select *ngIf = "userService.users" name="user" id="user" [(ngModel)]="userService.current_user">
+    <option *ngFor="let user of userService.users" [value]="user.name">{{user.name | titlecase}}</option>
 </select>

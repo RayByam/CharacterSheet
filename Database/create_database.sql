@@ -1,1 +1,1 @@
-CREATE DATABASE Sheet OWNER = ray_byam;
+CREATE DATABASE sheet OWNER = raybyam;

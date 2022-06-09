@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { UserService } from '../user.service';
 
 @Component({
@@ -6,15 +6,15 @@ import { UserService } from '../user.service';
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.css']
 })
-export class NavigationComponent implements OnInit {
+export class NavigationComponent implements AfterViewInit {
 
   constructor(
     public userService: UserService,
   ) {
-    console.log(this.userService.user_data)
-   }
-
-  ngOnInit(): void {
+  }
+  
+  ngAfterViewInit(): void {
+ 
   }
 
 }
