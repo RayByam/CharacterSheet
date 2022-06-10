@@ -16,5 +16,7 @@ export class NavigationComponent implements AfterViewInit {
   ngAfterViewInit(): void {
  
   }
-
+  selectUser(user: any) {
+    this.userService.current_user= user
+  }
 }

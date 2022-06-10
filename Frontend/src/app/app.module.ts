@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { CharacterListComponent } from './character-list/character-list.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { CharacterSheetComponent } from './character-sheet/character-sheet.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    CharacterListComponent
+    CharacterListComponent,
+    CharacterSheetComponent
   ],
   imports: [
     BrowserModule,

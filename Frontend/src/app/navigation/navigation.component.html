@@ -1,6 +1,27 @@
-<label for="user">Choose a user:</label>
 
-{{userService.users | json }} 
-<select *ngIf = "userService.users" name="user" id="user" [(ngModel)]="userService.current_user">
-    <option *ngFor="let user of userService.users" [value]="user.name">{{user.name | titlecase}}</option>
-</select>
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+      {{userService.current_user?.user_name ??'Select User'}}
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+      <li *ngFor="let user of userService.users"><button (click)="selectUser(user)" class="dropdown-item" type="button">{{user.user_name | titlecase}}</button></li>
+    </ul>
+  </div>
+
+<!--                      Example Login System (gutters)
+  <form class="row g-3">
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Email</label>
+      <input type="email" class="form-control" id="inputEmail4">
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Sign in</button>
+    </div>
+  </form> -->
+  
+  
+  
+  
+  
+  
+  

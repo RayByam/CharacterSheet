@@ -31,6 +31,7 @@
 --       REFERENCES accounts (user_id)
 -- );
 
+--Users
 DROP TABLE IF EXISTS users CASCADE;
 CREATE TABLE users (
     id bigserial PRIMARY KEY,
@@ -39,6 +40,7 @@ CREATE TABLE users (
     password VARCHAR (100) NOT NULL
 );
 
+--Characters 
 DROP TABLE IF EXISTS characters CASCADE;
 CREATE TABLE characters (
     id bigserial PRIMARY KEY,
@@ -47,3 +49,21 @@ CREATE TABLE characters (
     class VARCHAR (100) NOT NULL,
     level INT NOT NULL
 );
+
+--UPDATE
+UPDATE users
+SET COLUMN1 = VALUE1,
+COLUMN2 = VALUE2,
+COLUMN3 = VALUE3,
+COLUMN4 = VALUE4
+WHERE
+condition;
+
+UPDATE characters
+SET COLUMN1 = VALUE1,
+COLUMN2 = VALUE2,
+COLUMN3 = VALUE3,
+COLUMN4 = VALUE4,
+COLUMN5 = VALUE5
+WHERE
+condition;

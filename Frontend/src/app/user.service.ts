@@ -5,15 +5,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http'
   providedIn: 'root'
 })
 export class UserService {
-  public current_user = "ray"
-  public users: any = {}
+  public current_user: any 
+  public users: any = []
 
   constructor(
     private _http: HttpClient,
   ) { 
     this.getUser().subscribe(users => {
       this.users = users
-      console.log(this.users)
     })
   }
   private _httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) }

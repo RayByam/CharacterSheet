@@ -17,4 +17,8 @@ export class CharacterListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  delete(characterID: number) {
+    this.characterService.deleteCharacter(characterID).subscribe()
+  }
+
 }

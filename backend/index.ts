@@ -50,7 +50,7 @@ async function getUsers(req: Request, res: Response, next: NextFunction) {
 
 
 
-// CHARACTERSS
+// CHARACTERS
 router.get('/character/:characterID', getCharacter)
 router.get('/characters', getCharacters)
 
@@ -58,7 +58,7 @@ async function getCharacter(req: Request, res: Response, next: NextFunction) {
   const characterID = parseInt(req.params.characterID)
 
   pool.query('SELECT * FROM characters WHERE id = $1;', [characterID]).then(
-    query => response.status(200).json(query.rows[0])
+    query => res.status(200).json(query.rows[0])
   )
 }
 
@@ -68,3 +68,13 @@ async function getCharacters(req: Request, res: Response, next: NextFunction) {
   )
 }
 
+//Delete Character
+router.delete('/character/:characterID', deleteCharacter)
+
+async function deleteCharacter(req: Request, res: Response, next: NextFunction) {
+  const characterID = parseInt(req.params.characterID)
+  console.log("do i ever get here")
+  pool.query('SELECT * FROM delete_character($1);', [characterID]).then(
+    query => res.status(200).json(query.rows[0])
+  )
+}
