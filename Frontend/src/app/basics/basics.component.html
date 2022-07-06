@@ -1,0 +1,22 @@
+<form [formGroup]="basicsForm">
+
+    <!-- Character name and username-->
+    <div class="row m-3">
+        <app-labelled-input class="col" [label]="'Character Name'" [formGroup]="basicsForm" [placeholder]="'Name'" [controlName]="'character_name'"></app-labelled-input>
+        <app-labelled-input class="col" [label]="'Username'" [formGroup]="basicsForm" [placeholder]="''" [controlName]="'username'"></app-labelled-input>
+    </div>
+    
+            <!--  Class, level, race  -->
+    <div class="row m-3">
+        <app-labelled-input class="col" [label]="'Class & Level'" [formGroup]="basicsForm" [placeholder]="'Fighter Level 1'" [controlName]="'class_level'"></app-labelled-input>
+        <app-labelled-input class="col" [label]="'Race'" [formGroup]="basicsForm" [placeholder]="'Human'" [controlName]="'race'"></app-labelled-input>
+    </div>
+
+    <!--  Gender, heigth, age, and weight  -->
+    <div class="row m-3">
+        <app-labelled-input class="col-sm form-label ms-1" [label]="'Gender'" [formGroup]="basicsForm" [placeholder]="'M or F'" [controlName]="'gender'"></app-labelled-input>
+        <app-labelled-input class="col-sm form-label ms-1" [label]="'Heigth'" [formGroup]="basicsForm" [placeholder]="'0 ft. 0 in.'" [controlName]="'heigth'"></app-labelled-input>
+        <app-labelled-input class="col-sm form-label ms-1" [label]="'Age'" [formGroup]="basicsForm" [placeholder]="'23 years old'" [controlName]="'age'"></app-labelled-input>
+        <app-labelled-input class="col-sm form-label ms-1" [label]="'Weight'" [formGroup]="basicsForm" [placeholder]="'125 lb.'" [controlName]="'weight'"></app-labelled-input>
+    </div>
+</form>

@@ -1,11 +1,20 @@
+<button *ngIf="userService.current_user?.id" (click)="post(userService.current_user)">Create New Character</button>
 <div *ngFor="let character of characterService.character_list">
-    <div *ngIf = "character['user_id'] == userService.current_user?.id"> 
+    <div *ngIf="character['user_id'] == userService.current_user?.id"><br>
         <label>Name: {{character["character_name"]}}</label><br>
-        <label> Class: {{character["class"]}}</label><br>
-        <label> Level: {{character["level"]}}</label><br>
+        <label>Username: {{character["username"]}}</label><br>
+        <label>Class & Level: {{character["class_level"]}}</label><br>
+        <label>Race: {{character["race"]}}</label><br>
+        <label>Gender: {{character["gender"]}}</label><br>
+        <label>Heigth: {{character["heigth"]}}</label><br>
+        <label>Age: {{character["age"]}}</label><br>
+        <label>Weight: {{character["weight"]}}</label><br>
+        <br>
+        <button (click)="setCurrentCharacter(character)">Edit</button>
         <br>
         <button (click)="delete(character['id'])">Delete</button>
-        <button>Are you sure?</button>
     </div>
 </div>
+
+
 <router-outlet></router-outlet>

@@ -7,7 +7,7 @@
     "database": "psql -U postgres -d postgres -f create_database.sql",
     "tables": "psql -U raybyam -d sheet -f create_tables.sql",
     "functions": "psql -U raybyam -d sheet -f create_functions.sql",
-    "data": "psql -U raybyam -d Sheet -f create_mock_data.sql"
+    "data": "psql -U raybyam -d sheet -f create_mock_data.sql"
 
   },
   "keywords": [],

@@ -1,3 +1,6 @@
 \i 'functions/create_characters.sql'
 \i 'functions/create_users.sql'
-\i 'functions/delete.sql'
+\i 'functions/delete_characters.sql'
+\i 'functions/delete_users.sql'
+\i 'functions/update_character.sql'
+\i 'functions/update_user.sql'

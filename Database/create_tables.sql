@@ -1,4 +1,30 @@
 
+--Users
+DROP TABLE IF EXISTS users CASCADE;
+CREATE TABLE users (
+    id bigserial PRIMARY KEY,
+    username VARCHAR (100) NOT NULL,
+    email VARCHAR (100) NOT NULL UNIQUE,
+    password VARCHAR (100) NOT NULL
+);
+
+--Characters 
+DROP TABLE IF EXISTS characters CASCADE;
+CREATE TABLE characters (
+    id bigserial PRIMARY KEY,
+    user_id bigserial NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    character_name VARCHAR (100) NOT NUll,
+    username VARCHAR (100) NOT NULL,
+    class_level VARCHAR (100) NOT NULL,
+    race VARCHAR (100) NOT NULL,
+    gender VARCHAR (100) NOT NULL,
+    heigth VARCHAR (100) NOT NULL,
+    age VARCHAR (100) NOT NULL,
+    weight VARCHAR (100) NOT NULL
+);
+
+--EXample Tables
+
 -- CREATE TABLE [IF NOT EXISTS] Adventure (
 --     column1 datatype(length) column_contraint,
 --     column2 datatype(length) column_contraint,
@@ -31,39 +57,4 @@
 --       REFERENCES accounts (user_id)
 -- );
 
---Users
-DROP TABLE IF EXISTS users CASCADE;
-CREATE TABLE users (
-    id bigserial PRIMARY KEY,
-    user_name VARCHAR (100) NOT NULL,
-    email VARCHAR (100) NOT NULL UNIQUE,
-    password VARCHAR (100) NOT NULL
-);
 
---Characters 
-DROP TABLE IF EXISTS characters CASCADE;
-CREATE TABLE characters (
-    id bigserial PRIMARY KEY,
-    user_id bigserial NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-    character_name VARCHAR (100) NOT NUll,
-    class VARCHAR (100) NOT NULL,
-    level INT NOT NULL
-);
-
---UPDATE
-UPDATE users
-SET COLUMN1 = VALUE1,
-COLUMN2 = VALUE2,
-COLUMN3 = VALUE3,
-COLUMN4 = VALUE4
-WHERE
-condition;
-
-UPDATE characters
-SET COLUMN1 = VALUE1,
-COLUMN2 = VALUE2,
-COLUMN3 = VALUE3,
-COLUMN4 = VALUE4,
-COLUMN5 = VALUE5
-WHERE
-condition;

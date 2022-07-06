@@ -1,0 +1,47 @@
+<div class="col">
+    <div class="row m-2">
+        <th class="text-light white-black center-text fs-5"
+            scope="row">Health, Wounds, Initiative & DR</th>
+
+        <div class="col">
+            <br>
+            <table>
+                <td class="first white-black center-text fw-semibold fs-5">
+                    &nbsp;HP&nbsp;</td>
+                <input type="text" class="form-control" placeholder="20 HP" aria-label="">
+            </table>
+            <div class="row">
+            <app-labelled-input class="col" [label]="'Non-Lethal Damage'" [placeholder]="''" [controlName]="''"></app-labelled-input>
+            </div>
+            <div class="row">
+            <app-labelled-input class="col" [label]="'Damage Reduction'" [placeholder]="'0/Magic'" [controlName]="''"></app-labelled-input>
+            </div>
+        </div>
+        <div class="col">
+            <label for="Wounds" class="form-label ms-1">Wounds</label>
+            <textarea type="text" class="form-control" placeholder="" aria-label="Heigth"
+                style="height: 80%; resize: none;"></textarea>
+        </div>
+        <br>
+        <table>
+            <span class="row m-1">
+                <td class="first ms-2 me-2 col-3 fs-5 bg-dark text-center fw-semibold">
+                    <span class="align-middle text-light">
+                        Initiative
+                    </span>
+                </td>
+                <td class="col">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <input class="form-control col" type="text" placeholder="Total" aria-label="">
+                        </div>
+                        <label class="col-auto me-auto center-text fs-5">=</label>
+                        <input class="form-control col" type="text" placeholder="Dex" aria-label="">
+                        <label class="col-auto center-text fs-5">+</label>
+                        <input class="form-control col" type="text" placeholder="Extra" aria-label="">
+                    </div>
+                </td>
+            </span>
+        </table>
+    </div>
+</div>

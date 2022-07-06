@@ -8,7 +8,7 @@ import { UserService } from '../user.service';
   styleUrls: ['./character-list.component.css']
 })
 export class CharacterListComponent implements OnInit {
-  
+
   constructor(
     public userService: UserService,
     public characterService: CharacterService
@@ -20,5 +20,11 @@ export class CharacterListComponent implements OnInit {
   delete(characterID: number) {
     this.characterService.deleteCharacter(characterID).subscribe()
   }
+  post(user: any) {
+    this.characterService.createCharacter(user).subscribe()
+  }
 
+  setCurrentCharacter(character: any) {
+    this.characterService.currentCharacter = character
+  }
 }

@@ -1,33 +1,18 @@
-<!--                  Character name and creator name (form grid)                          -->
-<!-- <div class="row">
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Character Name" aria-label="Character Name">
-    </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Username" aria-label="Username">
-    </div>
-  </div> -->
+<!--   Character name and basics (form grid)  -->
+<app-basics></app-basics>
 
-<!--                   Class, level, race, etc (utilities and column sizing)
-<div class="mb-3">
-    <label for="formCL" class="form-label">Class & Level</label>
-    <input type="text" class="form-control" id="formCL" placeholder="Fighter Level 1">
-  </div>
-  <div class="mb-3">
-    <label for="formRace" class="form-label">Race</label>
-    <input type="text" class="form-control" id="formRace" placeholder="Half-Orc">
-  </div> -->
-  <!-- <div class="row g-3">
-    <div class="col-sm">
-      <input type="text" class="form-control" placeholder="Gender" aria-label="Gender">
+<!--  Abilites and their scores  -->
+<div class="row">
+    <div class="col">
+        <app-abilities></app-abilities>
     </div>
-    <div class="col-sm">
-      <input type="text" class="form-control" placeholder="Heigth" aria-label="Heigth">
+
+<!--    Health, Wounds, etc        -->
+    <div class="col">
+        <app-health-wounds></app-health-wounds>
     </div>
-    <div class="col-sm">
-      <input type="text" class="form-control" placeholder="Age" aria-label="Age">
-    </div>
-     <div class="col-sm">
-      <input type="text" class="form-control" placeholder="Weight" aria-label="Weight">
-    </div>
-  </div> -->
+</div>
+<!-- fort, reflex, will, bab, cmb, cmd-->
+<div>
+    <app-dice-bonus></app-dice-bonus>
+</div>
