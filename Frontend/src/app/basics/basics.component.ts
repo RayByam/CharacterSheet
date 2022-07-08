@@ -27,6 +27,7 @@ export class BasicsComponent {
 
   constructor(public characterService: CharacterService) {
     this.characterService.currentCharacter$.subscribe(character => {
+      if (character == null) return
       this.char = character
 
       this.basicsForm.patchValue({

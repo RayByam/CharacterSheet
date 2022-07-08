@@ -9,7 +9,7 @@
     <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
       <ul class="navbar-nav">
 
-        <div class="dropdown">
+        <div *ngIf="userService.current_user == null" class="dropdown">
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
             aria-expanded="false">
             {{userService.current_user?.username ??'Select User'}}
@@ -19,7 +19,10 @@
                 type="button">{{user.username | titlecase}}</button></li>
           </ul>
         </div>
-      </ul>
+        <div *ngIf="currentCharacter" class="ms-auto">
+          <button routerLink="" class="btn btn-secondary" (click)="noCharacter()">Character Select</button>
+        </div>
+      </ul> 
     </div>
 
   </div>

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-labelled-input',
@@ -13,7 +13,9 @@ export class LabelledInputComponent implements OnInit {
   @Input() formGroup: FormGroup
   @Input() placeholder: string
 
-  constructor() { }
+  constructor() {
+    
+  }
 
   ngOnInit(): void {
   }

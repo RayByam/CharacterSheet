@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { CharacterService } from '../character.service';
 
 @Component({
   selector: 'app-character-sheet',
@@ -7,7 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharacterSheetComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private characterService: CharacterService) {
+    const id = Number(this.route.snapshot.paramMap.get('id'))
+    this.characterService.getCharacters().subscribe(characters => {
+      this.characterService.currentCharacter = characters.find(character => character.id == id)
+    })
+  }
 
   ngOnInit(): void {
   }

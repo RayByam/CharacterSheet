@@ -1,4 +1,4 @@
-<button *ngIf="userService.current_user?.id" (click)="post(userService.current_user)">Create New Character</button>
+<a *ngIf="userService.current_user?.id"><button (click)="post(userService.current_user)">Create New Character</button></a>
 <div *ngFor="let character of characterService.character_list">
     <div *ngIf="character['user_id'] == userService.current_user?.id"><br>
         <label>Name: {{character["character_name"]}}</label><br>
@@ -10,11 +10,9 @@
         <label>Age: {{character["age"]}}</label><br>
         <label>Weight: {{character["weight"]}}</label><br>
         <br>
-        <button (click)="setCurrentCharacter(character)">Edit</button>
+        <a routerLink="/charactersheet/{{character.id}}"><button>Edit</button></a>
         <br>
         <button (click)="delete(character['id'])">Delete</button>
     </div>
 </div>
 
-
-<router-outlet></router-outlet>

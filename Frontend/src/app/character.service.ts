@@ -22,7 +22,7 @@ export class CharacterService {
     private _http: HttpClient,
   ) {
     this.getCharacters().subscribe(characters => {
-      this.currentCharacter = characters[0]
+      // this.currentCharacter = characters
       this.character_list = <any[]>characters
     })
   }
@@ -30,7 +30,7 @@ export class CharacterService {
   private _httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) }
   public getCharacters() {
     const url = 'http://localhost:3000/characters'
-    return this._http.get(url, this._httpOptions)
+    return this._http.get<any[]>(url, this._httpOptions)
   }
 
   //Delete Character

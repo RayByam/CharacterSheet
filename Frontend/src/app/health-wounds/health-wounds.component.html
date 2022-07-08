@@ -1,7 +1,6 @@
 <div class="col">
     <div class="row m-2">
-        <th class="text-light white-black center-text fs-5"
-            scope="row">Health, Wounds, Initiative & DR</th>
+        <th class="text-light white-black center-text fs-5" scope="row">Health, Wounds, Initiative & DR</th>
 
         <div class="col">
             <br>
@@ -11,10 +10,12 @@
                 <input type="text" class="form-control" placeholder="20 HP" aria-label="">
             </table>
             <div class="row">
-            <app-labelled-input class="col" [label]="'Non-Lethal Damage'" [placeholder]="''" [controlName]="''"></app-labelled-input>
+                <!-- <app-labelled-input class="col" [label]="'Non-Lethal Damage'" [placeholder]="''" [controlName]="''">
+                </app-labelled-input> -->
             </div>
             <div class="row">
-            <app-labelled-input class="col" [label]="'Damage Reduction'" [placeholder]="'0/Magic'" [controlName]="''"></app-labelled-input>
+                <!-- <app-labelled-input class="col" [label]="'Damage Reduction'" [placeholder]="'0/Magic'"
+                    [controlName]="''"></app-labelled-input> -->
             </div>
         </div>
         <div class="col">
@@ -43,5 +44,9 @@
                 </td>
             </span>
         </table>
+        <div class="col">
+            <label class="form-label">Misc. Modifiers</label>
+            <input type="text" class="form-control" placeholder="Any Other Modifiers">
+        </div>
     </div>
 </div>

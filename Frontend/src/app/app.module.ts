@@ -13,7 +13,8 @@ import { HealthWoundsComponent } from './health-wounds/health-wounds.component';
 import { BasicsComponent } from './basics/basics.component';
 import { LabelledInputComponent } from './labelled-input/labelled-input.component';
 import { AbilityTableComponent } from './ability-table/ability-table.component';
-import { DiceBonusComponent } from './dice-bonus/dice-bonus.component'
+import { SaveBonusComponent } from './save-bonus/save-bonus.component';
+import { AttackBonusComponent } from './attack-bonus/attack-bonus.component'
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DiceBonusComponent } from './dice-bonus/dice-bonus.component'
     BasicsComponent,
     LabelledInputComponent,
     AbilityTableComponent,
-    DiceBonusComponent,
+    SaveBonusComponent,
+    AttackBonusComponent,
   ],
   imports: [
     BrowserModule,

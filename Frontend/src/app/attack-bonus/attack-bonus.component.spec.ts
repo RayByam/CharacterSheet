@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DiceBonusComponent } from './dice-bonus.component';
+import { AttackBonusComponent } from './attack-bonus.component';
 
-describe('DiceBonusComponent', () => {
-  let component: DiceBonusComponent;
-  let fixture: ComponentFixture<DiceBonusComponent>;
+describe('AttackBonusComponent', () => {
+  let component: AttackBonusComponent;
+  let fixture: ComponentFixture<AttackBonusComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DiceBonusComponent ]
+      declarations: [ AttackBonusComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DiceBonusComponent);
+    fixture = TestBed.createComponent(AttackBonusComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

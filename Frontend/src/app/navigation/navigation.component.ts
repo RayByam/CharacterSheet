@@ -1,4 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
+import { CharacterService } from '../character.service';
 import { UserService } from '../user.service';
 
 @Component({
@@ -8,9 +9,15 @@ import { UserService } from '../user.service';
 })
 export class NavigationComponent implements AfterViewInit {
 
+  public currentCharacter: any
+
   constructor(
     public userService: UserService,
+    public characterService: CharacterService,
   ) {
+    this.characterService.currentCharacter$.subscribe(char => {
+      this.currentCharacter = char
+    })
   }
   
   ngAfterViewInit(): void {
@@ -18,5 +25,9 @@ export class NavigationComponent implements AfterViewInit {
   }
   selectUser(user: any) {
     this.userService.current_user= user
+  }
+
+  noCharacter(){
+    this.characterService.currentCharacter = null
   }
 }

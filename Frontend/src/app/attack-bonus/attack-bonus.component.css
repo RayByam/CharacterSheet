@@ -1,0 +1,9 @@
+.center-text {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.white-black {
+    background-color: black;
+    color: white;
+}
